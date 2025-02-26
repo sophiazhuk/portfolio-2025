@@ -1,0 +1,88 @@
+@import './navbar.scss';
+@import './hero.scss';
+@import './about.scss';
+@import './projects.scss';
+@import './contact.scss';
+@import './caseStudy.scss';
+@import url("https://use.typekit.net/aqg0oqx.css");
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');:root {
+  --background-color: rgb(50 46 47);
+  --text-color: rgb(236 235 231);
+  --accent: rgb(255, 225, 106);
+}
+
+[data-theme="light"] {
+  --background-color: rgb(236 235 231);
+  --text-color: rgb(50 46 47);
+}
+
+* {  box-sizing: border-box;}
+html {
+  scroll-behavior: smooth;
+  background-color: var(--background-color);
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:"DM Mono", monospace;  
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  color: var(--text-color);
+}
+.layout {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px; 
+}
+.two-col {
+  display: flex;
+}
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: left;
+  margin: 0px 250px 0px 280px;
+}
+.text-block p, .text-block h2, blockquote{
+  margin: 0;
+  text-align: left;
+}
+p {
+  font-size: 18px;
+}
+p a[target="_blank"]::after {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+  margin: 0 3px 0 5px;
+}
+p a:hover {
+  background-color: var(--accent);
+}
+p a:visited {
+  color: var(--text-color);
+}
+
+@media screen and (max-width: 1024px) {
+  section {
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  section {
+    margin: 0px 10px ;
+
+  }
+  
+}
+.hr {
+  width: 100%;
+  border-bottom: 1px var(--text-color) solid;
+}
+.hero, .about, .project, .contact { background: var(--background-color); }
+  

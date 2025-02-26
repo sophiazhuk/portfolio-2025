@@ -1,0 +1,34 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  font-family: monospace;
+  overflow: hidden;
+  width: 80%;
+  position: relative;
+}
+
+.cursor-trail {
+  position: fixed;
+  font-size: clamp(12px, 1vw, 18px);
+  font-family: "IBM Plex Mono", monospace;
+  color: var(--text-color); 
+  text-shadow: 0 0 5px rgb(236 235 231);;
+  pointer-events: none; 
+  transform: translate(-50%, -50%);
+  animation: fadeOut 1.2s ease-out forwards; 
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
