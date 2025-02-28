@@ -5,6 +5,7 @@
   top: 0;
   width: 250px;
   height: 100vh;
+  color: var(--text-color);
   background: var(--background-color);
   border-right: var(--text-color) 1px solid;
   padding: 2rem 0rem 2rem 2rem;
@@ -19,22 +20,36 @@
     padding: 0;
     margin: 0;
   }
-  
-  .navbar ul li {
-    padding: .75rem 0px;
-    transition: transform 0.3s ease-in-out;
-
-  }
-  .navbar ul li:hover {
-   transform: translateX(10px);
-   font-weight: bold;
-  }
   .navbar a {
     color: var(--text-color);
     text-decoration: none;
     font-size: 18px;
-  }
+    transition: color 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
+    
 
+  }
+  .navbar ul li {
+    margin: .75rem 0px;
+    padding-left: 1rem;
+    transition: transform 0.4s ease-in-out;
+    transition: border 0.2s ease-in-out;
+
+  }
+  .navbar ul li:hover,
+  .navbar ul li.active { 
+    transform: translateX(5px);
+    border-left: 3px solid var(--text-color);
+  }
+  .navbar ul li:hover,
+  .navbar ul li.active {
+    a {
+      background: var(--text-color);
+      color: var(--background-color);
+    }
+
+  }
+  
   .theme-toggle {
     display: flex;
     align-items: center;

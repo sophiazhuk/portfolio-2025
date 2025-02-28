@@ -2,23 +2,21 @@ import React from "react";
 import { useParams } from "react-router-dom";
 
 const caseStudies = {
-  "project1": {
-    title: "Project 1: Modern Portfolio Site",
-    description: "A case study on building a modern portfolio site with React and SCSS.",
-    details: "This project was created to showcase web development skills using React, modern CSS techniques, and accessibility best practices.",
-    image: "/images/project1.jpg",
+  "bellingham-buzz": {
+    title: "Bellingham Buzz",
+    focus: ["Local Events", "Community Engagement", "Entertainment", "Social Connections"],
+    challenge: "How can we make finding fun events in Bellingham easier for locals and visitors?",
+    approach: "Created an interactive website where users can take a quiz to discover places that match their mood or browse using filters.",
+    results: ["Improved event discoverability", "User-friendly filtering system"],
+    cta: "Encouraging users to explore new places in Bellingham with ease."
   },
-  "project2": {
-    title: "Project 2: Custom Blog Platform",
-    description: "Developing a blog platform with Firebase and React.",
-    details: "This project focused on creating a full-stack blog platform with user authentication and real-time database updates.",
-    image: "/images/project2.jpg",
-  },
-  "project3": {
-    title: "Project 3: Web-Based Productivity Tool",
-    description: "A productivity tool built for managing tasks efficiently.",
-    details: "This tool was designed with a user-friendly interface and features such as task tracking, deadlines, and collaboration.",
-    image: "/images/project3.jpg",
+  "virtual-realty-nw": {
+    title: "Virtual Realty NW",
+    focus: ["Real Estate", "Photography", "Web Design", "Business Solutions"],
+    challenge: "How can a real estate photography company showcase their work more effectively online?",
+    approach: "Developed a modern, visually-driven website featuring high-quality real estate photography portfolios.",
+    results: ["Enhanced online presence", "Better lead conversion for photography services"],
+    cta: "Driving more bookings for high-end real estate photography services."
   }
 };
 
@@ -31,13 +29,39 @@ const CaseStudy = () => {
   }
 
   return (
-    <div className="case-study">
+    <section className="case-study">
       <h1>{project.title}</h1>
       <div className="hr"></div>
-      <img src={project.image} alt={project.title} />
-      <p>{project.description}</p>
-      <p>{project.details}</p>
-    </div>
+
+      <div id="project-focus">
+        <h2>Project Focus</h2>
+        <ul>
+          {project.focus.map((item, index) => <li key={index}>{item}</li>)}
+        </ul>
+      </div>
+
+      <div id="challenge">
+        <h2>Challenge</h2>
+        <p>{project.challenge}</p>
+      </div>
+
+      <div id="approach">
+        <h2>Approach</h2>
+        <p>{project.approach}</p>
+      </div>
+
+      <div id="results">
+        <h2>Results</h2>
+        <ul>
+          {project.results.map((result, index) => <li key={index}>{result}</li>)}
+        </ul>
+      </div>
+
+      <div id="cta">
+        <h2>A Call to Action</h2>
+        <p>{project.cta}</p>
+      </div>
+    </section>
   );
 };
 

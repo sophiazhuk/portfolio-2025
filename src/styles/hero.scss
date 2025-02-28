@@ -16,7 +16,7 @@
   font-size: clamp(12px, 1vw, 18px);
   font-family: "IBM Plex Mono", monospace;
   color: var(--text-color); 
-  text-shadow: 0 0 5px rgb(236 235 231);;
+  text-shadow: 0 0 5px rgba(var(--text-color) 0.8);;
   pointer-events: none; 
   transform: translate(-50%, -50%);
   animation: fadeOut 1.2s ease-out forwards; 

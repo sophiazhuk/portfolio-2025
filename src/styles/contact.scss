@@ -1,0 +1,43 @@
+.email-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    text-decoration: underline;
+  }
+  
+  .email-container:hover {
+    color: var(--background-color);
+    background-color: var(--text-color);
+    .copy-icon {
+        color: var(--background-color);
+        transform: scale(1.2);
+
+    }
+  }
+  
+  .copy-icon {
+    font-size: 16px;
+    color: var(--text-color);
+  }
+
+  
+  .copied-text {
+    font-size: 14px;
+    color: var(--background-color);
+    margin-left: 10px;
+    animation: fadeOut 1.5s ease-in-out forwards;
+    text-decoration: none;
+  }
+  
+  .copied-text:hover {
+    color: var(--background-color);
+  }
+
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  

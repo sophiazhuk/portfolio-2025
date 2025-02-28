@@ -1,4 +1,7 @@
   
+  .about-text {
+    text-align: justify;
+  }
   .image-block-outer-wrapper {
     float: left;
     display: flex;
@@ -19,7 +22,7 @@
     overflow: hidden;
     width: 100%;
     max-width: 300px;
-    box-shadow:  0px 4px 5px rgba(0, 0, 0, 0.099)
+    box-shadow:  0px 4px 5px rgba(var(--text-color), 0.8);
 
 
   }

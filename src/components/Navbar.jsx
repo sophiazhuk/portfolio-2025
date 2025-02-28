@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -12,6 +14,25 @@ const Navbar = () => {
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
+  const [transform, setTransform] = useState({ rotateX: 0, rotateY: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      const { clientX, clientY } = event;
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+
+      const rotateY = ((clientX - centerX) / centerX) * -20;
+      const rotateX = ((clientY - centerY) / centerY) * 20; 
+
+      setTransform({ rotateX, rotateY });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
 
   return (
     <div className="navbar-container">
@@ -20,11 +41,39 @@ const Navbar = () => {
       </button>
       <nav className={`navbar ${isOpen ? "open" : ""}`}>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/projects">Projects</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>        
+          <li className={location.pathname === "/" ? "active" : ""}>
+            <a href="/">SOPHIA ZHUK</a>
+          </li>
+          <li className={location.pathname === "/about" ? "active" : ""}>
+            <a href="/about">About</a>
+          </li>
+          <li className={location.pathname === "/projects" ? "active" : ""}>
+            <a href="/projects">Projects</a>
+          </li>
+          <li className={location.pathname === "/contact" ? "active" : ""}>
+            <a href="/contact">Contact</a>
+          </li>
+        </ul>
+        <div 
+            className="image-block-outer-wrapper"
+            style={{
+              transform: `rotateX(${transform.rotateX}deg) rotateY(${transform.rotateY}deg)`,
+              transition: "transform 0.1s ease-out",
+            }}
+          >
+            <div className="fluid-image-animation-wrapper">
+              <div className="fluid-image-container">
+                <div className="content-fit">
+                  <img
+                    src="/images/polaroid.jpg"
+                    alt="Hero Section"
+                    className="hero-image"
+                  />
+                  <div className="fluidImageOverlay"></div>
+                </div>
+              </div>
+            </div>
+          </div>        
         <div className="theme-toggle" onClick={toggleTheme}>
           {theme === "dark" ? (
             <svg

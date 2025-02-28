@@ -3,7 +3,7 @@ import React from "react";
 const Projects = () => {
   return (
     <section id="projects" className="projects">
-      <h2>My Projects</h2>
+      <h2>Projects</h2>
       <div className="hr"></div>
 
       <div className="project-grid">
@@ -12,7 +12,7 @@ const Projects = () => {
       <div className="project-image" style={{ backgroundImage: "url('/images/bbuzz.png')" }}></div>
           <div className="project-content">
             <h3>Bellingham Buzz</h3>
-            <p>A a nightlife guide for discovering local bars and entertainment.</p>
+            <p>A nightlife guide for discovering local bars and entertainment.</p>
           </div>
         </a>
 
@@ -32,7 +32,7 @@ const Projects = () => {
           </div>
         </a>
 
-        <a href={`/case-study/project4`} className="project-card">
+        <a href={`/case-study/virtual-realty-nw`} className="project-card">
         <div className="project-image" style={{ backgroundImage: "url('/images/vrnw.png')" }}></div>
           <div className="project-content">
             <h3>Virtual Realty NW</h3>
