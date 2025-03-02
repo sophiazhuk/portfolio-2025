@@ -8,15 +8,15 @@ const Projects = () => {
 
       <div className="project-grid">
 
-      <a href={`/case-study/project1`} className="project-card">
-      <div className="project-image" style={{ backgroundImage: "url('/images/bbuzz.png')" }}></div>
+      <a href={`/case-study/bellingham-buzz`} className="project-card">
+      <div className="project-image" style={{ backgroundImage: "url('/images/bellingham-buzz/mobile-home-mock4.png')" }}></div>
           <div className="project-content">
             <h3>Bellingham Buzz</h3>
             <p>A nightlife guide for discovering local bars and entertainment.</p>
           </div>
         </a>
 
-        <a href={`/case-study/project2`} className="project-card">
+        <a href={`/case-study/mitra`} className="project-card">
         <div className="project-image" style={{ backgroundImage: "url('/images/mitra.png')" }}></div>
           <div className="project-content">
             <h3>Mitra: NEAT LAB</h3>
@@ -24,7 +24,7 @@ const Projects = () => {
           </div>
         </a>
 
-        <a href={`/case-study/project3`} className="project-card">
+        <a href={`/case-study/showcase`} className="project-card">
         <div className="project-image" style={{ backgroundImage: "url('/images/showcase.png')" }}></div>
           <div className="project-content">
             <h3>Innovative Showcase, CII</h3>
@@ -33,7 +33,7 @@ const Projects = () => {
         </a>
 
         <a href={`/case-study/virtual-realty-nw`} className="project-card">
-        <div className="project-image" style={{ backgroundImage: "url('/images/vrnw.png')" }}></div>
+        <div className="project-image" style={{ backgroundImage: "url('/images/vrnw/home-mock.png')" }}></div>
           <div className="project-content">
             <h3>Virtual Realty NW</h3>
             <p>A real estate photography website for showcasing services.</p>

@@ -44,11 +44,11 @@ const Navbar = () => {
           <li className={location.pathname === "/" ? "active" : ""}>
             <a href="/">SOPHIA ZHUK</a>
           </li>
-          <li className={location.pathname === "/about" ? "active" : ""}>
-            <a href="/about">About</a>
-          </li>
           <li className={location.pathname === "/projects" ? "active" : ""}>
             <a href="/projects">Projects</a>
+          </li>
+          <li className={location.pathname === "/about" ? "active" : ""}>
+            <a href="/about">About</a>
           </li>
           <li className={location.pathname === "/contact" ? "active" : ""}>
             <a href="/contact">Contact</a>
@@ -81,7 +81,7 @@ const Navbar = () => {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              strokeWidth="1"
+              strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
               className="icon"
@@ -102,7 +102,7 @@ const Navbar = () => {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              strokeWidth="1"
+              strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
               className="icon"

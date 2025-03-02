@@ -1,14 +1,22 @@
-.email-container {
+.contact {
+  height: 100vh;
+}
+.contact h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+h3.email-container{
     position: relative;
     display: inline-flex;
     align-items: center;
     gap: 10px;
     cursor: pointer;
     transition: color 0.3s ease;
-    text-decoration: underline;
   }
   
-  .email-container:hover {
+  h3.email-container:hover {
     color: var(--background-color);
     background-color: var(--text-color);
     .copy-icon {
@@ -26,18 +34,45 @@
   
   .copied-text {
     font-size: 14px;
-    color: var(--background-color);
-    margin-left: 10px;
+    color: var(--text-color);
+    background: none;
+    margin-left: 20px;
     animation: fadeOut 1.5s ease-in-out forwards;
     text-decoration: none;
   }
   
   .copied-text:hover {
-    color: var(--background-color);
+    color: var(--text-color);
+    background: var(--background-color) ;
   }
 
   @keyframes fadeOut {
     0% { opacity: 1; }
     100% { opacity: 0; }
   }
+  .contact a {
+    position: relative;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease-in-out;
+  }
   
+  
+
+  .ascii-cat {
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+    white-space: pre;
+    line-height: 1.2;
+    color: var(--text-color);
+  }
+  
+  
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+  }
